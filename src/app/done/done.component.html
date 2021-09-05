@@ -1,0 +1,12 @@
+<div class="done-container">
+    <h2 style="padding-bottom: 20px;">Done :</h2>
+
+    <div class="done-list">
+        <div class="done-box" *ngFor="let item of todoAdded">
+            {{item}}
+            <span>
+                <mat-icon class="done-icon">done</mat-icon>
+            </span>
+        </div>
+    </div>
+</div>

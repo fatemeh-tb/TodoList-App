@@ -1,0 +1,19 @@
+<form (submit)="addNewTodo()">
+    <input type="text" name="inputTodo" placeholder="Enter todo..." class="todo-input" [(ngModel)]="inputTodo"
+        required />
+    <input type="submit" value="Add Todo" class="btn btn-danger todo-submit" [disabled]="!inputTodo" />
+</form>
+
+<div class="todo-container">
+    <h2 style="padding-bottom: 20px;">To do :</h2>
+
+    <div class="todo-list">
+        <div class="todo-box" *ngFor="let todo of todos, let i = index" (click)="onAddedTodo(todo.content, i)"
+            ngDefaultControl>
+            {{todo.content}}
+            <span>
+                <mat-icon class="remove-icon" (click)="onDeleteTodo(i)">delete_outline</mat-icon>
+            </span>
+        </div>
+    </div>
+</div>
