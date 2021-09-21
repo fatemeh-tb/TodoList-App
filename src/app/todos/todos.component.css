@@ -54,13 +54,22 @@
     align-items: center;
     justify-content: space-between;
     box-sizing: border-box;
-    cursor: pointer;
     background: white;
     font-size: 14px;
 }
 
+.add-icon {
+    color: #e1e1e1;
+    cursor: pointer;
+}
+
+.add-icon:hover {
+    color: #198754;
+}
+
 .remove-icon {
     color: #e1e1e1;
+    cursor: pointer;
 }
 
 .remove-icon:hover {

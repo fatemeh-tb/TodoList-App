@@ -51,12 +51,9 @@ export class TodosComponent implements OnInit {
     this.inputTodo = "";
   }
 
-
   onDeleteTodo(id: number) {
     this.todos = this.todos.filter((v, i) => i !== id);
-
   }
-
 
   onAddedTodo(data: string, id: number) {
     this.todoService.addedTodo(data);

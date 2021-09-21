@@ -15,6 +15,10 @@
     display: block;
 }
 
+.done-list:empty {
+    border: none;
+}
+
 .done-box {
     padding: 20px 10px;
     border-bottom: solid 1px #ccc;
@@ -30,4 +34,15 @@
 
 .done-icon {
     color: #198754;
+    font-size: 19px;
+}
+
+.remove-icon {
+    color: #e1e1e1;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.remove-icon:hover {
+    color: #dc3545;
 }

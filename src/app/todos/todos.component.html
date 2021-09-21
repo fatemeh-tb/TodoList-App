@@ -8,12 +8,16 @@
     <h2 style="padding-bottom: 20px;">To do :</h2>
 
     <div class="todo-list">
-        <div class="todo-box" *ngFor="let todo of todos, let i = index" (click)="onAddedTodo(todo.content, i)"
-            ngDefaultControl>
+        <div class="todo-box" *ngFor="let todo of todos, let i = index" ngDefaultControl>
             {{todo.content}}
-            <span>
-                <mat-icon class="remove-icon" (click)="onDeleteTodo(i)">delete_outline</mat-icon>
-            </span>
+            <div>
+                <span>
+                    <mat-icon class="add-icon" (click)="onAddedTodo(todo.content, i)">check_circle</mat-icon>
+                </span>
+                <span>
+                    <mat-icon class="remove-icon ms-3" (click)="onDeleteTodo(i)">remove_circle</mat-icon>
+                </span>
+            </div>
         </div>
     </div>
 </div>

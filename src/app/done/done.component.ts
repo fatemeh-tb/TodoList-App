@@ -20,4 +20,8 @@ export class DoneComponent implements OnInit {
     })
   }
 
+  onRemoveDone(id: number) {
+    this.todoAdded = this.todoAdded.filter((v, i) => i !== id);
+  }
+
 }
